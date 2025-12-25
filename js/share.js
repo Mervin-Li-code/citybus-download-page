@@ -58,20 +58,16 @@ $(document).ready(function () {
     // 从当前 URL 提取 path
     var currentPath = window.location.pathname; // "/mobileapp/bus_route_detail"
 
-    // 提取 path 的第一部分作为 host
+    // 提取 path 的最后一部分作为 host
     var pathParts = currentPath.split("/").filter(function (part) {
       return part.length > 0;
     });
 
     if (pathParts.length > 0) {
-      var host = pathParts[0]; // "mobileapp"
+      // 使用最后一部分作为 host
+      var host = pathParts[pathParts.length - 1]; // "bus_route_detail"
       deeplink += "//" + host;
-
-      // 剩余部分作为 path
-      if (pathParts.length > 1) {
-        var path = pathParts.slice(1).join("/"); // "bus_route_detail"
-        deeplink += "/" + path;
-      }
+      // 不添加前面的部分作为 path
     }
 
     // 获取所有 URL 参数
