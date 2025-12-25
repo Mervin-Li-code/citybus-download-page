@@ -48,7 +48,7 @@ const i18nData = {
     downloadIOS: 'Download on the App Store',
     downloadAndroid: 'GET IT ON Google Play',
     downloadHuawei: 'EXPLORE IT ON AppGallery',
-    copyright: 'Copyright © 2025 Citybus Limited dddddddddddddddddddddddddddddddd',
+    copyright: 'Copyright © 2025 Citybus Limited ',
     langTraditional: '繁',
     langSimplified: '简',
     langEnglish: 'EN'

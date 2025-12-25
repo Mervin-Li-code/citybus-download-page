@@ -5,9 +5,9 @@
     ],
     "target": {
       "namespace": "android_app",
-      "package_name": "com.cherrypicks.tcc.standard.v3.dev",
+      "package_name": "com.cherrypicks.citybusapp.dev",
       "sha256_cert_fingerprints": [
-        "E4:11:73:64:55:81:F5:9B:A3:AE:E6:8D:A5:30:F9:E5:A6:5A:70:2D:71:84:E5:68:14:43:F7:BA:33:F5:E2:B3"
+        "0D:F6:55:4E:7D:40:8A:1A:A7:97:15:67:C3:D8:DF:E2:74:45:32:7D:C8:31:BD:F5:BF:F6:D5:CF:0A:3D:01:F7"
       ]
     }
   }
