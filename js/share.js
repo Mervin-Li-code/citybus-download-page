@@ -3,7 +3,7 @@ var aosUrl = "https://play.google.com/store/apps/details?id=your.package.name"; 
 var huaweiUrl = "https://appgallery.huawei.com/app/your-app-id"; //huawei appgallery download link
 
 // Deep link 协议
-var deepLinkScheme = "citybusapp://";
+var deepLinkScheme = "citybusmobile://";
 
 function GetRequest() {
   var url = location.search;
