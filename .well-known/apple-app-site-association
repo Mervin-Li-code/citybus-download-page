@@ -1,0 +1,11 @@
+{
+  "applinks": {
+    "apps": [],
+    "details": [
+      {
+        "appID": "H73ALW8382.com.cherrypicks.tcc.standard.v3.dev",
+        "paths": ["*"]
+      }
+    ]
+  }
+}

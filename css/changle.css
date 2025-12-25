@@ -479,39 +479,42 @@ body {
   display: flex;
   flex-direction: row;
   align-items: center;
+  justify-content: space-between; /* 使用 space-between 来分布按钮 */
   width: 100%;
   padding: 0;
   margin-bottom: 40px;
   box-sizing: border-box;
+  gap: 8px; /* 减少间距 */
 }
 
 .download-btn-mobile {
   display: flex;
   height: 50px;
-  flex: 0 0 auto; /* 不自动拉伸，保持按钮原始宽度 */
+  flex: 1 1 0; /* 允许按钮缩小，平均分配空间 */
   min-width: 0;
+  max-width: 120px; /* 设置最大宽度，防止按钮太大 */
 }
 
 /* 第一个按钮：左对齐 */
 .download-btn-mobile:first-child {
-  margin-right: auto;
+  margin-right: 0; /* 移除 auto margin，使用 gap 控制间距 */
 }
 
 /* 最后一个按钮：右对齐 */
 .download-btn-mobile:last-child {
-  margin-left: auto;
+  margin-left: 0; /* 移除 auto margin，使用 gap 控制间距 */
 }
 
-/* 中间的按钮：如果有多个，它们会自然排列 */
+/* 中间的按钮 */
 .download-btn-mobile:not(:first-child):not(:last-child) {
-  margin: 0 auto;
+  margin: 0; /* 移除 auto margin */
 }
 
 .download-btn-mobile img {
   height: 100%;
-  width: auto; /* 保持图片原始宽高比 */
+  width: 100%; /* 改为 100%，让图片填满按钮容器 */
   max-width: 100%;
-  object-fit: contain;
+  object-fit: contain; /* 保持图片比例，不拉伸 */
   display: block;
   flex-shrink: 0;
 }
