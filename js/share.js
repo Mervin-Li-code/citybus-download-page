@@ -53,10 +53,43 @@ $(document).ready(function () {
   var shouldAutoOpen = urlParams.get("auto") !== "false"; // 默认自动打开，除非明确设置为 false
 
   if (shouldAutoOpen) {
-    var deeplink = deepLinkScheme;
-    if (Request.code) {
-      deeplink += "?code=" + Request.code;
+    var deeplink = deepLinkScheme; // "citybusmobile://"
+
+    // 从当前 URL 提取 path
+    var currentPath = window.location.pathname; // "/mobileapp/bus_route_detail"
+
+    // 提取 path 的第一部分作为 host
+    var pathParts = currentPath.split("/").filter(function (part) {
+      return part.length > 0;
+    });
+
+    if (pathParts.length > 0) {
+      var host = pathParts[0]; // "mobileapp"
+      deeplink += "//" + host;
+
+      // 剩余部分作为 path
+      if (pathParts.length > 1) {
+        var path = pathParts.slice(1).join("/"); // "bus_route_detail"
+        deeplink += "/" + path;
+      }
     }
+
+    // 获取所有 URL 参数
+    var urlParams = new URLSearchParams(window.location.search);
+    var params = [];
+
+    urlParams.forEach(function (value, key) {
+      if (key !== "auto" && value) {
+        // 排除 auto 参数，且只传递有值的参数
+        params.push(key + "=" + encodeURIComponent(value));
+      }
+    });
+
+    // 如果有参数，添加到 deeplink
+    if (params.length > 0) {
+      deeplink += "?" + params.join("&");
+    }
+
     // 尝试打开应用，如果未安装则停留在当前页面
     window.location.href = deeplink;
   }
