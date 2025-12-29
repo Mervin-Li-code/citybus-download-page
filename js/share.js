@@ -66,7 +66,7 @@ $(document).ready(function () {
     if (pathParts.length > 0) {
       // 使用最后一部分作为 host
       var host = pathParts[pathParts.length - 1]; // "bus_route_detail"
-      deeplink += "//" + host;
+      deeplink += host;
       // 不添加前面的部分作为 path
     }
 
