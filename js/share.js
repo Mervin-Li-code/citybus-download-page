@@ -46,6 +46,37 @@ var is_weixin = (function () {
   }
 })();
 
+// 移除设备检测，统一处理所有浏览器
+
+// 尝试打开应用的函数（简化版）
+function tryOpenApp(deeplink) {
+  // 延迟打开，给页面时间加载
+  setTimeout(function () {
+    try {
+      window.location.href = deeplink;
+    } catch (e) {
+      console.error("Failed to open app:", e);
+    }
+  }, 500);
+}
+
+// 使用用户交互触发打开应用
+function openAppWithUserInteraction(deeplink) {
+  // 这个方法需要在用户点击事件中调用
+  try {
+    // 方法1: 直接跳转
+    window.location.href = deeplink;
+  } catch (e) {
+    // 方法2: 使用 window.open
+    try {
+      window.open(deeplink, "_self");
+    } catch (e2) {
+      // 方法3: 使用 window.location
+      window.location = deeplink;
+    }
+  }
+}
+
 $(document).ready(function () {
   // 自动尝试打开应用（如果 URL 中有参数或默认行为）
   // 检查是否有 deeplink 参数，或者是否有 code 参数需要传递给应用
@@ -86,8 +117,27 @@ $(document).ready(function () {
       deeplink += "?" + params.join("&");
     }
 
-    // 尝试打开应用，如果未安装则停留在当前页面
-    window.location.href = deeplink;
+    window.currentDeeplink = deeplink;
+
+    tryOpenApp(deeplink);
+
+    // 添加页面点击事件：用户点击页面任意位置时打开应用
+    var clickHandler = function (e) {
+      // 如果点击的不是链接或按钮，尝试打开应用
+      if (!$(e.target).closest("a, button").length) {
+        openAppWithUserInteraction(deeplink);
+        // 移除事件监听，避免重复触发
+        $(document).off("click touchstart", clickHandler);
+      }
+    };
+
+    // 监听点击和触摸事件
+    $(document).on("click touchstart", clickHandler);
+
+    // 5秒后移除事件监听（避免长期占用）
+    setTimeout(function () {
+      $(document).off("click touchstart", clickHandler);
+    }, 5000);
   }
 
   // iOS 下载按钮
