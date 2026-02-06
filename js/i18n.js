@@ -6,11 +6,11 @@ const i18nData = {
     logoEn: 'Citybus',
     
     // 主标题
-    subtitle: '全新城巴應用程式',
-    titleMain: '陪你成長 領航未來',
+    subtitle: '城巴App嶄新升級',
+    titleMain: '智慧同行  貼心每程',
     
     // 描述
-    description: '全新應用程式設有詳盡的景點介紹和交通指南，助您輕鬆計劃行程。您亦可透過應用程式購買電子車票、收聽導覽廣播和享受無數的購物禮遇。立即下載，盡情探索香港！',
+    description: '城巴應用程式迎來全面升級，呈現嶄新面貌，功能更智慧、更貼心，讓每位乘客的出行更輕鬆、更開心。全新程式以「智慧同行，貼心每程」為承諾，結合智能科技與人性化設計，成為香港市民每日出行的可靠夥伴程。重新下載城巴App，開啟您的智慧出行旅程！',
     
     // 下载按钮
     downloadIOS: 'Download on the App Store',
@@ -18,7 +18,7 @@ const i18nData = {
     downloadHuawei: 'EXPLORE IT ON AppGallery',
     
     // 页脚
-    copyright: '版權所有© 2025 城巴有限公司',
+    copyright: '版權所有© 2026 城巴有限公司',
     
     // 语言选择
     langTraditional: '繁',
@@ -28,13 +28,13 @@ const i18nData = {
   'zh-Hans': {
     logo: '城巴',
     logoEn: 'Citybus',
-    subtitle: '全新城巴应用程序',
-    titleMain: '陪你成长 领航未来',
-    description: '全新应用程序设有详尽的景点介绍和交通指南，助您轻松计划行程。您亦可通过应用程序购买电子车票、收听导览广播和享受无数的购物礼遇。立即下载，尽情探索香港！',
+    subtitle: '城巴App崭新升级',
+    titleMain: '智慧通行 贴心每程',
+    description: '城巴应用程式迎来全面升级，呈现崭新面貌，功能更智慧、更贴心，让每位乘客的出行更轻松、更开心。全新程式以「智慧同行，贴心每程」为承诺，结合智能科技与人性化设计，成为香港市民每日出行的可靠伙伴程。重新下载城巴App，开启您的智慧出行旅程！',
     downloadIOS: 'Download on the App Store',
     downloadAndroid: 'GET IT ON Google Play',
     downloadHuawei: 'EXPLORE IT ON AppGallery',
-    copyright: '版权所有© 2025 城巴有限公司',
+    copyright: '版权所有© 2026 城巴有限公司',
     langTraditional: '繁',
     langSimplified: '简',
     langEnglish: 'EN'
@@ -42,13 +42,13 @@ const i18nData = {
   'en': {
     logo: 'Citybus',
     logoEn: 'Citybus',
-    subtitle: 'New Citybus App',
-    titleMain: 'Grow with you, Navigate the future',
-    description: 'The new app provides detailed attraction introductions and traffic guides to help you easily plan your itinerary. You can also purchase electronic tickets, listen to guided broadcasts, and enjoy countless shopping offers through the app. Download now and explore Hong Kong!',
+    subtitle: 'Citybus App Upgraded',
+    titleMain: 'Smart Together, Heartfelt Every Ride',
+    description: 'Experience a fresh upgrade to the new Citybus App, designed for smarter and more convenient travel. With our commitment to "Smart Together, Heartfelt Every Ride," the new application enhances your commuting experience, making every ride easier and more enjoyable. Download the new Citybus app today and elevate your travel experience!',
     downloadIOS: 'Download on the App Store',
     downloadAndroid: 'GET IT ON Google Play',
     downloadHuawei: 'EXPLORE IT ON AppGallery',
-    copyright: 'Copyright © 2025 Citybus Limited ',
+    copyright: 'Copyright © 2026 Citybus Limited. All Rights Reserved.',
     langTraditional: '繁',
     langSimplified: '简',
     langEnglish: 'EN'
